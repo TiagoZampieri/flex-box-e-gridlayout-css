@@ -1,0 +1,41 @@
+/*grid layout*/
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.app{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 45px 1fr;
+    grid-template-columns: 200px 1fr;
+}
+
+header{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+    grid-column: 1/-1;
+}
+
+aside{
+    background-color: #213e48;
+}
+
+/*flex box*/
+div.items{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.items .single-item{
+    background: #ccc;
+    margin-right: 10px;
+
+    flex: 1 1 auto;
+}
+
+@media (max-width: 420px){
+    div.items{
+        display: flex;
+        flex-flow: column;
+    }
+}
